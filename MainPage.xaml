@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SportsGuideBKP.MainPage"
+                       xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui">
+    <ContentPage.Behaviors>
+        <mct:StatusBarBehavior StatusBarColor="#66A98F" />
+    </ContentPage.Behaviors>
+    
+
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+            <Frame Margin="7">
+                <Label Text="Спортивный путеводитель" HorizontalTextAlignment="Center" FontAttributes="Italic" FontSize="18"/>
+            </Frame>
+
+            <Frame Margin="7" >
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnSummerFrameTapped"/>
+                </Frame.GestureRecognizers>
+                <StackLayout Orientation="Vertical" >
+                    <Image Source="summer_games.jpg" />
+                    <Button Text="Летние игры" CornerRadius="0"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame Margin="7">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnWinterFrameTapped"/>
+                </Frame.GestureRecognizers>
+                <StackLayout Orientation="Vertical" >
+                    <Image Source="winter_games.jpg" />
+                    <Button Text="Зимние игры" CornerRadius="0"/>
+                </StackLayout>
+            </Frame>
+            
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

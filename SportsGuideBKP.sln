@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsGuideBKP", "SportsGuideBKP.csproj", "{D608011F-DA87-4717-8FCF-D14222CC547F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D608011F-DA87-4717-8FCF-D14222CC547F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D608011F-DA87-4717-8FCF-D14222CC547F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D608011F-DA87-4717-8FCF-D14222CC547F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D608011F-DA87-4717-8FCF-D14222CC547F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D608011F-DA87-4717-8FCF-D14222CC547F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D608011F-DA87-4717-8FCF-D14222CC547F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04970629-0E2D-4179-A884-A55E462F3660}
+	EndGlobalSection
+EndGlobal
