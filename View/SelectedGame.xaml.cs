@@ -2,9 +2,9 @@ namespace SportsGuideBKP.View;
 
 public partial class SelectedGame : ContentPage
 {
-	public SelectedGame(Model.OlympicGames selectedWinterGames)
+	public SelectedGame(Model.OlympicGames selectedGames)
 	{
 		InitializeComponent();
-        BindingContext = selectedWinterGames;
+        BindingContext = selectedGames;
     }
 }

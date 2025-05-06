@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SportsGuideBKP.View.SummerGamesView"
+             Shell.NavBarIsVisible="False">
+    
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+            <Frame>
+                <Label Text="Летние игры" HorizontalTextAlignment="Center" Style="{StaticResource HeaderLabelStyle}"/>
+            </Frame>
+
+            <ListView ItemsSource="{Binding SummerOlympicGames}" x:Name="SummerGamesList" ItemSelected="SummerGamesList_ItemSelected" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+
+                                <Frame Padding="10">
+                                    <Grid Padding="10" ColumnSpacing="10">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image Grid.Column="0" Source="{Binding Image}" HeightRequest="100" WidthRequest="100" Aspect="AspectFit" />
+                                        <Label Text="{Binding Name}" Grid.Column="1" HorizontalOptions="Start" Margin="10,20,0,0" 
+                                   Style="{StaticResource HeaderLabelStyle}"/>
+                                    </Grid>
+                                </Frame>
+
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

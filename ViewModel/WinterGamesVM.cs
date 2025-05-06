@@ -23,7 +23,7 @@ namespace SportsGuideBKP.ViewModel
 
         public WinterGamesVM()
         {
-            WinterGamesRepo winterGamesRepo = new WinterGamesRepo();
+            SummerGamesRepo winterGamesRepo = new SummerGamesRepo();
             List<OlympicGames> allWinterOlympicGames = winterGamesRepo.GetAllWinterGames();
             WinterOlympicGames = new ObservableCollection<OlympicGames>(allWinterOlympicGames);
         }
