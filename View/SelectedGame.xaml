@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SportsGuideBKP.View.SelectedGame"
+             Shell.NavBarIsVisible="False">
+
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+            <Frame >
+                <Label Text="{Binding Name}" HorizontalTextAlignment="Center" Style="{StaticResource HeaderLabelStyle}"/>
+            </Frame>
+
+            <Frame >
+                <Label Text="{Binding Description}" FontSize="18"/>
+            </Frame>
+                
+            <Frame >
+                <Image Source="{Binding Image}"/>
+            </Frame>
+
+            <Frame >
+                <Label Text="{Binding DopDescription[0]}" FontSize="18"/>
+            </Frame>
+
+            <Frame >
+                <Label Text="{Binding DopDescription[1]}" FontSize="18"/>
+            </Frame>
+
+            <Frame >
+                <StackLayout Style="{StaticResource FrameStackStyle}">
+                    <Label Text="Больше всего золотых медалей" Style="{StaticResource HeaderLabelStyle}"/>
+                    <Label Text="{Binding TopTier}" FontSize="18"/>
+                </StackLayout>
+            </Frame>
+
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -10,11 +10,11 @@
 
     <ScrollView>
         <StackLayout Orientation="Vertical">
-            <Frame Margin="7">
-                <Label Text="Спортивный путеводитель" HorizontalTextAlignment="Center" FontAttributes="Italic" FontSize="18"/>
+            <Frame >
+                <Label Text="Спортивный путеводитель" HorizontalTextAlignment="Center" Style="{StaticResource HeaderLabelStyle}"/>
             </Frame>
 
-            <Frame Margin="7" >
+            <Frame >
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnSummerFrameTapped"/>
                 </Frame.GestureRecognizers>
@@ -24,7 +24,7 @@
                 </StackLayout>
             </Frame>
 
-            <Frame Margin="7">
+            <Frame >
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnWinterFrameTapped"/>
                 </Frame.GestureRecognizers>

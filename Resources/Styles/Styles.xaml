@@ -9,22 +9,32 @@
         <Setter Property="HasShadow" Value="False" />
         <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray950}}" />
         <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="Margin" Value="7" />
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LightBack}, Dark={StaticResource DarkBack}}" />
     </Style>
 
+    <Style TargetType="StackLayout" x:Key="FrameStackStyle">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LightBack}, Dark={StaticResource DarkBack}}" />
+    </Style>
     <Style TargetType="StackLayout">
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource DarkBack}, Dark={StaticResource LightBack}}" />
     </Style>
+
+    <Style TargetType="Label" x:Key="HeaderLabelStyle">
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LightFont}, Dark={StaticResource DarkFont}}"/>
+    </Style>
     
     <Style TargetType="Button">
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource PrimaryDarkText}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource PrimaryDarkText}, Dark={StaticResource White}}" />
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LightButn}, Dark={StaticResource DarkButn}}" />
         <Setter Property="FontFamily" Value="OpenSansRegular"/>
         <Setter Property="FontSize" Value="18"/>
         <Setter Property="BorderWidth" Value="0"/>
         <Setter Property="CornerRadius" Value="8"/>
         <Setter Property="Padding" Value="14,10"/>
-        <Setter Property="FontAttributes" Value="Italic"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
         <Setter Property="MinimumHeightRequest" Value="44"/>
         <Setter Property="MinimumWidthRequest" Value="44"/>
         <Setter Property="VisualStateManager.VisualStateGroups">
