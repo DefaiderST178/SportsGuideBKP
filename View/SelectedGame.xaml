@@ -11,7 +11,10 @@
             </Frame>
 
             <Frame >
-                <Label Text="{Binding Description}" FontSize="18"/>
+                <StackLayout Style="{StaticResource FrameStackStyle}">
+                    <Label Text="Описание" Style="{StaticResource HeaderLabelStyle}"/>
+                    <Label Text="{Binding Description}" FontSize="18"/>
+                </StackLayout>
             </Frame>
                 
             <Frame >
@@ -19,11 +22,17 @@
             </Frame>
 
             <Frame >
-                <Label Text="{Binding DopDescription[0]}" FontSize="18"/>
+                <StackLayout Style="{StaticResource FrameStackStyle}">
+                    <Label Text="Дополнительная информация" Style="{StaticResource HeaderLabelStyle}"/>
+                    <Label Text="{Binding DopDescription[1]}" FontSize="18"/>
+                </StackLayout>
             </Frame>
 
             <Frame >
-                <Label Text="{Binding DopDescription[1]}" FontSize="18"/>
+                <StackLayout Style="{StaticResource FrameStackStyle}">
+                    <Label Text="Дополнительная информация" Style="{StaticResource HeaderLabelStyle}"/>
+                    <Label Text="{Binding DopDescription[1]}" FontSize="18"/>
+                </StackLayout>
             </Frame>
 
             <Frame >
@@ -33,6 +42,9 @@
                 </StackLayout>
             </Frame>
 
+            <Button x:Name="BackNavBtn" Clicked="BackNavBtn_Clicked"
+                    Text="Назад" Margin="10"  HorizontalOptions="End" HeightRequest="40" WidthRequest="100">
+            </Button>
 
         </StackLayout>
     </ScrollView>

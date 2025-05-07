@@ -64,6 +64,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="View\OlympicWinnersView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\SelectedGame.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

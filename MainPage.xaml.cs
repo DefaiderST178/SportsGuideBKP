@@ -16,5 +16,10 @@ namespace SportsGuideBKP
         {
             await Navigation.PushAsync(new WinterGamesView());
         }
+
+        private async void OnWinnersFrameTapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new OlympicWinnersView());
+        }
     }
 }

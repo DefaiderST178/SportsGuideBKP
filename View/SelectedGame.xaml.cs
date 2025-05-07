@@ -7,4 +7,9 @@ public partial class SelectedGame : ContentPage
 		InitializeComponent();
         BindingContext = selectedGames;
     }
+
+    private async void BackNavBtn_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PopAsync();
+    }
 }

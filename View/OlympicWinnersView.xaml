@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SportsGuideBKP.View.OlympicWinnersView" Shell.NavBarIsVisible="False">
+    
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+            <Frame>
+                <Label Text="Результаты летних Олимпийских игр 2024 Париж" 
+                       Style="{StaticResource HeaderLabelStyle}" HorizontalTextAlignment="Center"/>
+            </Frame>
+            
+            <CollectionView ItemsSource="{Binding OlympicWinners}" >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="10">
+                            <StackLayout Style="{StaticResource FrameStackStyle}" Orientation="Vertical">
+                                <Label Text="{Binding Country}" FontSize="24" HorizontalTextAlignment="Center"
+                                       HorizontalOptions="Center" Margin="0,0,0,15"/>
+                                <HorizontalStackLayout HorizontalOptions="Center" Spacing="5">
+                                    <Image Source="gold_medal.png" WidthRequest="40" HeightRequest="40" />
+                                    <Label Text="{Binding NumberGoldMedals}" VerticalOptions="Center" FontSize="20"/>
+
+                                    <Image Source="silver_medal.png" WidthRequest="40" HeightRequest="40" />
+                                    <Label Text="{Binding NumberSilverMedals}" VerticalOptions="Center" FontSize="20"/>
+
+                                    <Image Source="bronze_medal.png" WidthRequest="40" HeightRequest="40" />
+                                    <Label Text="{Binding NumberBronzeMedals}" VerticalOptions="Center" FontSize="20"/>
+                                </HorizontalStackLayout>
+
+                                <HorizontalStackLayout HorizontalOptions="Center" Spacing="5" Margin="0,15,0,0">
+                                    <Label Text="Итого медалей:" VerticalOptions="Center" FontSize="20"/>
+                                    <Label Text="{Binding TotalMedals}" VerticalOptions="Center" FontSize="20"/>
+                                </HorizontalStackLayout>
+                                <BoxView HeightRequest="2" Color="Black" Margin="0,10"/>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

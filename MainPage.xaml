@@ -33,7 +33,17 @@
                     <Button Text="Зимние игры" CornerRadius="0"/>
                 </StackLayout>
             </Frame>
-            
+
+            <Frame >
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnWinnersFrameTapped"/>
+                </Frame.GestureRecognizers>
+                <StackLayout Orientation="Vertical" >
+                    <Image Source="pobeda.jpg" />
+                    <Button Text="Победители" CornerRadius="0"/>
+                </StackLayout>
+            </Frame>
+
         </StackLayout>
     </ScrollView>
 
