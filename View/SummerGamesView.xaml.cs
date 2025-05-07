@@ -8,8 +8,8 @@ public partial class SummerGamesView : ContentPage
 	public SummerGamesView()
 	{
 		InitializeComponent();
-        WinterGamesVM winterGamesVM = new WinterGamesVM();
-        BindingContext = winterGamesVM;
+        SummerGamesVM summerGamesVM = new SummerGamesVM();
+        BindingContext = summerGamesVM;
     }
 
     private void SummerGamesList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -17,9 +17,9 @@ public partial class SummerGamesView : ContentPage
         if (e.SelectedItem == null)
             return;
 
-        var selectedWinterGames = e.SelectedItem as OlympicGames;
+        var selectedSummerGames = e.SelectedItem as OlympicGames;
 
-        Navigation.PushAsync(new SelectedGame(selectedWinterGames));
+        Navigation.PushAsync(new SelectedGame(selectedSummerGames));
 
         SummerGamesList.SelectedItem = null;
     }

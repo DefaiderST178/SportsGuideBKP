@@ -1,5 +1,4 @@
-﻿
-using SportsGuideBKP.View;
+﻿using SportsGuideBKP.View;
 
 namespace SportsGuideBKP
 {
@@ -11,7 +10,7 @@ namespace SportsGuideBKP
         }
         private async void OnSummerFrameTapped(object sender, EventArgs e)
         {
-            //await Navigation.PushAsync(new SecondPage());
+            await Navigation.PushAsync(new SummerGamesView());
         }
         private async void OnWinterFrameTapped(object sender, EventArgs e)
         {
