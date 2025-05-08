@@ -1,6 +1,6 @@
 ﻿namespace SportsGuideBKP.Model
 {
-    public class SummerOlympicRepo
+    public class SummerGamesRepo
     {
         List<OlympicGames> AllSummerOlympicGames = new List<OlympicGames>()
         {
