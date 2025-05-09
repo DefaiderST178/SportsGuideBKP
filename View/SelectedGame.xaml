@@ -43,7 +43,7 @@
             </Frame>
 
             <Button x:Name="BackNavBtn" Clicked="BackNavBtn_Clicked"
-                    Text="Назад" Margin="10"  HorizontalOptions="End" HeightRequest="40" WidthRequest="100">
+                    Text="Назад" Margin="10"  HorizontalOptions="End" HeightRequest="50" WidthRequest="150">
             </Button>
 
         </StackLayout>

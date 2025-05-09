@@ -7,7 +7,6 @@
         <mct:StatusBarBehavior StatusBarColor="#66A98F" />
     </ContentPage.Behaviors>
     
-
     <ScrollView>
         <StackLayout Orientation="Vertical">
             <Frame >
@@ -20,7 +19,7 @@
                 </Frame.GestureRecognizers>
                 <StackLayout Orientation="Vertical" >
                     <Image Source="summer_games.jpg" />
-                    <Button Text="Летние игры" CornerRadius="0"/>
+                    <Button Text="Летние игры" CornerRadius="0" x:Name="SummerNavBtn" Clicked="SummerNavBtn_Clicked"/>
                 </StackLayout>
             </Frame>
 
@@ -30,7 +29,7 @@
                 </Frame.GestureRecognizers>
                 <StackLayout Orientation="Vertical" >
                     <Image Source="winter_games.jpg" />
-                    <Button Text="Зимние игры" CornerRadius="0"/>
+                    <Button Text="Зимние игры" CornerRadius="0" x:Name="WinterNavBtn" Clicked="WinterNavBtn_Clicked"/>
                 </StackLayout>
             </Frame>
 
@@ -40,7 +39,15 @@
                 </Frame.GestureRecognizers>
                 <StackLayout Orientation="Vertical" >
                     <Image Source="pobeda.jpg" />
-                    <Button Text="Победители" CornerRadius="0"/>
+                    <Button Text="Победители" CornerRadius="0" x:Name="WinnerNavBtn" Clicked="WinnerNavBtn_Clicked"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame>
+                <StackLayout Style="{StaticResource FrameStackStyle}" Orientation="Vertical">
+                    <Label Text="Приложение разработано для спортивного клуба колледжа «Беркут»"/>
+                    <Label Text=""/>
+                    <Label Text="Версия 1.0.3"/>
                 </StackLayout>
             </Frame>
 
