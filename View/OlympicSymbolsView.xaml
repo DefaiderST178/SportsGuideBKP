@@ -11,12 +11,15 @@
 
             <FlexLayout Direction="Row" Wrap="Wrap" AlignItems="Start" JustifyContent="SpaceAround" Padding="5">
 
-                <CollectionView ItemsSource="{Binding OlympicSymbols}" ItemsLayout="VerticalGrid, 2"
-                    SelectionMode="Single" SelectionChanged="CollectionView_SelectionChanged" >
+                <CollectionView ItemsSource="{Binding OlympicSymbols}" ItemsLayout="VerticalGrid, 2">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
 
                             <Frame WidthRequest="180" HeightRequest="200" Margin="5" Padding="5">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Frame_Tapped" CommandParameter="{Binding .}"/>
+                                </Frame.GestureRecognizers>
+
                                 <Grid >
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="150"/>

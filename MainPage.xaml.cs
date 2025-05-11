@@ -1,5 +1,6 @@
 ﻿using SportsGuideBKP.Model;
 using SportsGuideBKP.View;
+using SportsGuideBKP.ViewModel;
 
 namespace SportsGuideBKP
 {
@@ -8,46 +9,36 @@ namespace SportsGuideBKP
         public MainPage()
         {
             InitializeComponent();
+            OlympicChampionsVM olympicChampionsVM = new OlympicChampionsVM();
+            BindingContext = olympicChampionsVM;
         }
-        // нажатия на панели
+        // выбор летнего спорта
         private async void OnSummerFrameTapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new SummerGamesView());
         }
+        // выбор зимнего спорта
         private async void OnWinterFrameTapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new WinterGamesView());
         }
-
+        // выбор победителя
         private async void OnWinnersFrameTapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new OlympicWinnersView());
         }
-
+        // выбор символа
         private async void OnSymbolsFrameTapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new OlympicSymbolsView());
         }
-
-        // Нажатия на кнопки
-        private async void SummerNavBtn_Clicked(object sender, EventArgs e)
+        // выбор чемпиона
+        private async void Champion_Tapped(object sender, TappedEventArgs e)
         {
-            await Navigation.PushAsync(new SummerGamesView());
-        }
-
-        private async void WinterNavBtn_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new WinterGamesView());
-        }
-
-        private async void WinnerNavBtn_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new OlympicWinnersView());
-        }
-
-        private async void SimbolsNavBtn_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new OlympicSymbolsView());
+            if (e.Parameter is OlympicChampions selectedChampion)
+            {
+                await Navigation.PushAsync(new SelectedOlympicChampionsView(selectedChampion));
+            }
         }
     }
 }

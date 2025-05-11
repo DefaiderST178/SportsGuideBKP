@@ -2,11 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SportsGuideBKP.MainPage"
-                       xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui">
+             xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui">
     <ContentPage.Behaviors>
         <mct:StatusBarBehavior StatusBarColor="#66A98F" />
     </ContentPage.Behaviors>
-    
+
     <ScrollView>
         <StackLayout Orientation="Vertical">
             <Frame >
@@ -29,8 +29,9 @@
                         <TapGestureRecognizer Tapped="OnSummerFrameTapped"/>
                     </Frame.GestureRecognizers>
                     <StackLayout Orientation="Vertical" >
-                        <Image Source="summer_games.jpg" />
-                        <Button Text="Летние игры" CornerRadius="0" x:Name="SummerNavBtn" Clicked="SummerNavBtn_Clicked"/>
+                        <Image Source="summer_games.jpg" Aspect="AspectFill"/>
+
+                        <Label Text="Летние игры" FontSize="14" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
                     </StackLayout>
                 </Frame>
 
@@ -39,8 +40,9 @@
                         <TapGestureRecognizer Tapped="OnWinterFrameTapped"/>
                     </Frame.GestureRecognizers>
                     <StackLayout Orientation="Vertical" >
-                        <Image Source="winter_games.jpg" />
-                        <Button Text="Зимние игры" CornerRadius="0" x:Name="WinterNavBtn" Clicked="WinterNavBtn_Clicked"/>
+                        <Image Source="winter_games.jpg" Aspect="AspectFill"/>
+
+                        <Label Text="Зимние игры" FontSize="14" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
                     </StackLayout>
                 </Frame>
 
@@ -49,8 +51,9 @@
                         <TapGestureRecognizer Tapped="OnSymbolsFrameTapped"/>
                     </Frame.GestureRecognizers>
                     <StackLayout Orientation="Vertical" >
-                        <Image Source="symbols.jpg" />
-                        <Button Text="Символы" CornerRadius="0" x:Name="SimbolsNavBtn" Clicked="SimbolsNavBtn_Clicked"/>
+                        <Image Source="symbols.jpg" Aspect="AspectFill"/>
+
+                        <Label Text="Символы" FontSize="14" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
                     </StackLayout>
                 </Frame>
 
@@ -59,18 +62,51 @@
                         <TapGestureRecognizer Tapped="OnWinnersFrameTapped"/>
                     </Frame.GestureRecognizers>
                     <StackLayout Orientation="Vertical" >
-                        <Image Source="pobeda.jpg" />
-                        <Button Text="Победители" CornerRadius="0" x:Name="WinnerNavBtn" Clicked="WinnerNavBtn_Clicked"/>
+                        <Image Source="pobeda.jpg" Aspect="AspectFill"/>
+
+                        <Label Text="Победители" FontSize="14" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
                     </StackLayout>
                 </Frame>
-
             </Grid>
+
+            <CarouselView ItemsSource="{Binding OlympicChampions}" HeightRequest="270" Margin="0" IndicatorView="indicatorView">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="0" HeightRequest="250">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Champion_Tapped" CommandParameter="{Binding .}"/>
+                            </Frame.GestureRecognizers>
+
+                            <VerticalStackLayout>
+                                <Label Text="Известные чемпионы" Padding="10" HorizontalTextAlignment="Center" Style="{StaticResource HeaderLabelStyle}" />
+
+                                <Grid ColumnDefinitions="200,Auto">
+                                    <Image Source="{Binding Image}" Grid.Column="0" WidthRequest="190" HeightRequest="190" Aspect="AspectFit"/>
+
+                                    <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
+                                        <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="18" Padding="5"/>
+                                        
+                                        <Label Text="{Binding SportDiscipline, StringFormat='Спорт: {0}'}" Padding="5"/>
+
+                                        <Label Text="{Binding Country, StringFormat='Страна: {0}'}" FontSize="Small" Padding="5"/>
+
+                                        <Label Text="{Binding TotalMedals, StringFormat='Всего медалей: {0}'}" Padding="5"/>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <!--Индикатор прокрутки нужно перекрасить в стилях!--> 
+            <IndicatorView x:Name="indicatorView" HorizontalOptions="Center"
+                       VerticalOptions="End" Margin="0,0,0,10"/>
 
             <Frame>
                 <StackLayout Style="{StaticResource FrameStackStyle}" Orientation="Vertical">
                     <Label Text="Приложение разработано для спортивного клуба колледжа «Беркут»"/>
                     <Label Text=""/>
-                    <Label Text="Версия 1.0.3"/>
+                    <Label Text="Версия 1.1.4"/>
                 </StackLayout>
             </Frame>
 

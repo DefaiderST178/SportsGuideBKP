@@ -12,13 +12,11 @@ public partial class OlympicSymbolsView : ContentPage
         BindingContext = olimpicSymbolsVM;
     }
 
-    private async void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    private async void Frame_Tapped(object sender, TappedEventArgs e)
     {
-        if (e.CurrentSelection.FirstOrDefault() is OlympicSymbols selectedSymbol)
+        if (e.Parameter is OlympicSymbols selectedSymbol)
         {
             await Navigation.PushAsync(new SelectedOlimpicSymbolView(selectedSymbol));
-
-            ((CollectionView)sender).SelectedItem = null;
         }
     }
 }

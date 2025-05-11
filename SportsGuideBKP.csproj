@@ -86,6 +86,9 @@
 	  <MauiXaml Update="View\SelectedOlimpicSymbolView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\SelectedOlympicChampionsView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\SummerGamesView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

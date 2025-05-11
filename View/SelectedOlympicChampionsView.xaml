@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SportsGuideBKP.View.SelectedOlympicChampionsView"
+             Shell.NavBarIsVisible="False">
+
+    <ScrollView>
+        <StackLayout>
+            <Frame>
+                <Label Text="{Binding Name}" Style="{StaticResource HeaderLabelStyle}" HorizontalTextAlignment="Center"/>
+            </Frame>
+
+            <Frame>
+                <Image Source="{Binding Image}" HeightRequest="300" WidthRequest="300" Aspect="AspectFill"/>
+            </Frame>
+
+            <Frame>
+                <StackLayout Style="{StaticResource FrameStackStyle}">
+                    <Label Text="Биография" Style="{StaticResource HeaderLabelStyle}"/>
+                    <Label Text="{Binding Biography}"/>
+                </StackLayout>
+            </Frame>
+
+            <Button x:Name="BackNavBtn" Clicked="BackNavBtn_Clicked"
+                    Text="Назад" Margin="10"  HorizontalOptions="End" HeightRequest="50" WidthRequest="150">
+            </Button>
+
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>
