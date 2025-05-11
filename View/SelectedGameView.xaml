@@ -24,7 +24,7 @@
             <Frame >
                 <StackLayout Style="{StaticResource FrameStackStyle}">
                     <Label Text="Дополнительная информация" Style="{StaticResource HeaderLabelStyle}"/>
-                    <Label Text="{Binding DopDescription[1]}" FontSize="18"/>
+                    <Label Text="{Binding DopDescription[0]}" FontSize="18"/>
                 </StackLayout>
             </Frame>
 

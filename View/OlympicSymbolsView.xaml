@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SportsGuideBKP.View.OlympicSymbolsView"
+             Shell.NavBarIsVisible="False">
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+            <Frame>
+                <Label Text="Символы Олимпийских игр" HorizontalTextAlignment="Center" Style="{StaticResource HeaderLabelStyle}"/>
+            </Frame>
+
+            <FlexLayout Direction="Row" Wrap="Wrap" AlignItems="Start" JustifyContent="SpaceAround" Padding="5">
+
+                <CollectionView ItemsSource="{Binding OlympicSymbols}" ItemsLayout="VerticalGrid, 2"
+                    SelectionMode="Single" SelectionChanged="CollectionView_SelectionChanged" >
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+
+                            <Frame WidthRequest="180" HeightRequest="200" Margin="5" Padding="5">
+                                <Grid >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="150"/>
+                                        <RowDefinition Height="50"/>
+                                    </Grid.RowDefinitions>
+                                    
+                                    <Image Source="{Binding Image}" Aspect="AspectFit" Grid.Row="0"
+                                        WidthRequest="150" HeightRequest="150" />
+                                    <Label Text="{Binding Name}" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Grid.Row="1"/>
+                                </Grid>
+                            </Frame>
+
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </FlexLayout>
+        </StackLayout>
+        
+    </ScrollView>
+</ContentPage>

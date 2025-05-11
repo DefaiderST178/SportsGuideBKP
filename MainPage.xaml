@@ -13,35 +13,58 @@
                 <Label Text="Спортивный путеводитель" HorizontalTextAlignment="Center" Style="{StaticResource HeaderLabelStyle}"/>
             </Frame>
 
-            <Frame >
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnSummerFrameTapped"/>
-                </Frame.GestureRecognizers>
-                <StackLayout Orientation="Vertical" >
-                    <Image Source="summer_games.jpg" />
-                    <Button Text="Летние игры" CornerRadius="0" x:Name="SummerNavBtn" Clicked="SummerNavBtn_Clicked"/>
-                </StackLayout>
-            </Frame>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
-            <Frame >
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnWinterFrameTapped"/>
-                </Frame.GestureRecognizers>
-                <StackLayout Orientation="Vertical" >
-                    <Image Source="winter_games.jpg" />
-                    <Button Text="Зимние игры" CornerRadius="0" x:Name="WinterNavBtn" Clicked="WinterNavBtn_Clicked"/>
-                </StackLayout>
-            </Frame>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-            <Frame >
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnWinnersFrameTapped"/>
-                </Frame.GestureRecognizers>
-                <StackLayout Orientation="Vertical" >
-                    <Image Source="pobeda.jpg" />
-                    <Button Text="Победители" CornerRadius="0" x:Name="WinnerNavBtn" Clicked="WinnerNavBtn_Clicked"/>
-                </StackLayout>
-            </Frame>
+                <Frame Grid.Row="0" Grid.Column="0">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSummerFrameTapped"/>
+                    </Frame.GestureRecognizers>
+                    <StackLayout Orientation="Vertical" >
+                        <Image Source="summer_games.jpg" />
+                        <Button Text="Летние игры" CornerRadius="0" x:Name="SummerNavBtn" Clicked="SummerNavBtn_Clicked"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Grid.Row="0" Grid.Column="1">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnWinterFrameTapped"/>
+                    </Frame.GestureRecognizers>
+                    <StackLayout Orientation="Vertical" >
+                        <Image Source="winter_games.jpg" />
+                        <Button Text="Зимние игры" CornerRadius="0" x:Name="WinterNavBtn" Clicked="WinterNavBtn_Clicked"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Grid.Row="1" Grid.Column="0">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSymbolsFrameTapped"/>
+                    </Frame.GestureRecognizers>
+                    <StackLayout Orientation="Vertical" >
+                        <Image Source="symbols.jpg" />
+                        <Button Text="Символы" CornerRadius="0" x:Name="SimbolsNavBtn" Clicked="SimbolsNavBtn_Clicked"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Grid.Row="1" Grid.Column="1">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnWinnersFrameTapped"/>
+                    </Frame.GestureRecognizers>
+                    <StackLayout Orientation="Vertical" >
+                        <Image Source="pobeda.jpg" />
+                        <Button Text="Победители" CornerRadius="0" x:Name="WinnerNavBtn" Clicked="WinnerNavBtn_Clicked"/>
+                    </StackLayout>
+                </Frame>
+
+            </Grid>
 
             <Frame>
                 <StackLayout Style="{StaticResource FrameStackStyle}" Orientation="Vertical">

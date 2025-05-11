@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SportsGuideBKP.View.SelectedOlimpicSymbolView"
+             Shell.NavBarIsVisible="False">
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+            <Frame >
+                <Label Text="{Binding Name}" HorizontalTextAlignment="Center" Style="{StaticResource HeaderLabelStyle}"/>
+            </Frame>
+
+            <Frame >
+                <Label Text="{Binding OlympicDate}" FontSize="18"/>
+            </Frame>
+
+            <Frame >
+                <Image Source="{Binding Image}"/>
+            </Frame>
+
+            <Frame >
+                <StackLayout Style="{StaticResource FrameStackStyle}">
+                    <Label Text="Описание" Style="{StaticResource HeaderLabelStyle}"/>
+                    <Label Text="{Binding Description}" FontSize="18"/>
+                </StackLayout>
+            </Frame>
+
+            <Button x:Name="BackNavBtn" Clicked="BackNavBtn_Clicked"
+            Text="Назад" Margin="10"  HorizontalOptions="End" HeightRequest="50" WidthRequest="150">
+            </Button>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
