@@ -31,7 +31,7 @@
                     <StackLayout Orientation="Vertical" >
                         <Image Source="summer_games.jpg" Aspect="AspectFill"/>
 
-                        <Label Text="Летние игры" FontSize="14" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+                        <Label Text="Летние игры" FontSize="14" TextColor="Black" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
                     </StackLayout>
                 </Frame>
 
@@ -42,7 +42,7 @@
                     <StackLayout Orientation="Vertical" >
                         <Image Source="winter_games.jpg" Aspect="AspectFill"/>
 
-                        <Label Text="Зимние игры" FontSize="14" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+                        <Label Text="Зимние игры" FontSize="14" TextColor="Black" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
                     </StackLayout>
                 </Frame>
 
@@ -53,7 +53,7 @@
                     <StackLayout Orientation="Vertical" >
                         <Image Source="symbols.jpg" Aspect="AspectFill"/>
 
-                        <Label Text="Символы" FontSize="14" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+                        <Label Text="Символы" FontSize="14" TextColor="Black" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
                     </StackLayout>
                 </Frame>
 
@@ -64,7 +64,7 @@
                     <StackLayout Orientation="Vertical" >
                         <Image Source="pobeda.jpg" Aspect="AspectFill"/>
 
-                        <Label Text="Победители" FontSize="14" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+                        <Label Text="Победители" FontSize="14" TextColor="Black" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
                     </StackLayout>
                 </Frame>
             </Grid>
